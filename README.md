@@ -1,4 +1,4 @@
-# lstm_hyperopt
+# lstm-hyperopt
  一个基本的多层lstm rnn模型，使用hyperopt进行调参，保存调参过程中的最优模型并用于分类。
 
 ### 运行环境
