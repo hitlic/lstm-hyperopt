@@ -40,7 +40,7 @@ class DNNModel:
         hyper_params.default(default_params)
         self.hypers = hyper_params  # 所有超参数都保存在其中
 
-    def set_placeholers(self):
+    def set_public(self):
         '''
         placeholder 参数
         '''
@@ -171,7 +171,7 @@ class DNNModel:
         """
         DNN模型构建
         """
-        self.set_placeholers()
+        self.set_public()
 
         inputs = self.inputs_layer()
         embedding = self.embedding_layer(inputs)
