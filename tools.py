@@ -276,7 +276,7 @@ class Parameters:
         设置默认参数，仅添加缺失的参数，不改变已有参数
         '''
         for key, value in default_params.items():
-            if not self.__dict__.get(key):
+            if self.__dict__.get(key) is None:
                 self.__dict__[key] = value
 
     def update(self, params):
@@ -287,7 +287,7 @@ class Parameters:
         if isinstance(params, Parameters):
             param_set = params.to_dict()
         for key, value in param_set.items():
-            if self.__dict__.get(key):
+            if self.__dict__.get(key) is not None:
                 self.__dict__[key] = value
 
     def extend(self, params):
